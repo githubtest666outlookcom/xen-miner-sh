@@ -41,7 +41,7 @@ pip install -U -r requirements.txt
 sleep 5
 
 # 后台运行 miner
-nohup python3 miner.py --gpu=true >block.log &
+nohup python3 miner.py --gpu=true &>block.log &
 sleep 3
 
 # 列出所有支持设备
