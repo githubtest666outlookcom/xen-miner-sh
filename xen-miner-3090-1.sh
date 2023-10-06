@@ -41,7 +41,7 @@ pip install -U -r requirements.txt
 sleep 5
 
 # 后台运行 miner
-nohup python3 miner.py --gpu=true &>block.log &
+nohup python3 miner.py --gpu=true > block.log 2>&1 &
 sleep 3
 
 # 列出所有支持设备
@@ -53,7 +53,7 @@ ps -aux|grep python3
 sleep 1
 
 # 单显卡
-nohup ./xengpuminer -b 0 >xen-log.log &
+nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
 sleep 3
 
 # 查看进程

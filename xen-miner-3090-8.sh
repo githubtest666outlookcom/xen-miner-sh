@@ -41,7 +41,7 @@ pip install -U -r requirements.txt
 sleep 5
 
 # 后台运行 miner
-nohup python3 miner.py --gpu=true &>block.log &
+nohup python3 miner.py --gpu=true > block.log 2>&1 &
 sleep 3
 
 # 列出所有支持设备
@@ -53,21 +53,21 @@ ps -aux|grep python3
 sleep 1
 
 # 多设备挖矿
-nohup ./xengpuminer -d 0 &>xen-log1.log &
+nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
 sleep 3
-nohup ./xengpuminer -d 1 &>xen-log2.log &
+nohup ./xengpuminer -d 1 > xen-log2.log 2>&1 &
 sleep 3
-nohup ./xengpuminer -d 2 &>xen-log3.log &
+nohup ./xengpuminer -d 2 > xen-log3.log 2>&1 &
 sleep 3
-nohup ./xengpuminer -d 3 &>xen-log4.log &
+nohup ./xengpuminer -d 3 > xen-log4.log 2>&1 &
 sleep 3
-nohup ./xengpuminer -d 4 &>xen-log5.log &
+nohup ./xengpuminer -d 4 > xen-log5.log 2>&1 &
 sleep 3
-nohup ./xengpuminer -d 5 &>xen-log6.log &
+nohup ./xengpuminer -d 5 > xen-log6.log 2>&1 &
 sleep 3
-nohup ./xengpuminer -d 6 &>xen-log7.log &
+nohup ./xengpuminer -d 6 > xen-log7.log 2>&1 &
 sleep 3
-nohup ./xengpuminer -d 7 &>xen-log8.log &
+nohup ./xengpuminer -d 7 > xen-log8.log 2>&1 &
 sleep 3
 
 # 查看进程
