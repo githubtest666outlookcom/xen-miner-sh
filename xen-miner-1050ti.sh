@@ -41,7 +41,7 @@ pip install -U -r requirements.txt
 sleep 5
 
 # 后台运行 miner
-nohup python3 miner.py --gpu=true > block.log 2>&1 &
+sudo nohup python3 miner.py --gpu=true > block.log 2>&1 &
 sleep 3
 
 # 查看进程
@@ -53,7 +53,7 @@ sleep 1
 sleep 1
 
 # 单显卡
-nohup ./xengpuminer -b 0 >xen-log.log &
+sudo nohup ./xengpuminer -b 0 >xen-log.log &
 sleep 3
 
 # 查看进程
