@@ -31,8 +31,8 @@ sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0x1cCF8
 chmod +x build.sh
 sleep 1
 # 初始化挖矿代码-设置显卡计算能力
-# A4000 A5000 A6000 3090
-./build.sh -cuda_arch sm_86
+# 4090 4070
+./build.sh -cuda_arch sm_89
 sleep 30
 
 # 初始化
