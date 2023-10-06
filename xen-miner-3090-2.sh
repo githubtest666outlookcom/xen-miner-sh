@@ -35,30 +35,29 @@ sleep 1
 ./build.sh -cuda_arch sm_86
 sleep 30
 
-
 # 初始化
 pip install -U -r requirements.txt
 sleep 5
 
 # 后台运行 miner
-nohup python3 miner.py --gpu=true > block.log 2>&1 &
-sleep 3
+#nohup python3 miner.py --gpu=true > block.log 2>&1 &
+#sleep 3
+
+# 查看进程
+#ps -aux|grep python3
+#sleep 1
 
 # 列出所有支持设备
 ./xengpuminer -l -m cuda
 sleep 1
 
-# 查看进程
-ps -aux|grep python3
-sleep 1
-
 # 多设备挖矿
-nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
-sleep 3
-nohup ./xengpuminer -d 1 > xen-log2.log 2>&1 &
-sleep 3
+#nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
+#sleep 3
+#nohup ./xengpuminer -d 1 > xen-log2.log 2>&1 &
+#sleep 3
 
 
 # 查看进程
-ps -aux|grep xengpuminer
-sleep 1
+#ps -aux|grep xengpuminer
+#sleep 1

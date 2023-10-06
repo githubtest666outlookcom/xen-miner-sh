@@ -44,12 +44,12 @@ sleep 5
 nohup python3 miner.py --gpu=true > block.log 2>&1 &
 sleep 3
 
-# 列出所有支持设备
-./xengpuminer -l -m cuda
-sleep 1
-
 # 查看进程
 ps -aux|grep python3
+sleep 1
+
+# 列出所有支持设备
+./xengpuminer -l -m cuda
 sleep 1
 
 # 单显卡
