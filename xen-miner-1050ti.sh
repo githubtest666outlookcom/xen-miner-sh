@@ -31,21 +31,22 @@ sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0x1cCF8
 chmod +x build.sh
 sleep 1
 # 初始化挖矿代码-设置显卡计算能力
-# 1050 ti
-./build.sh -cuda_arch sm_61
+# A4000 A5000 A6000 3090
+echo "run ./build.sh -cuda_arch sm_86"
+./build.sh -cuda_arch sm_86
 sleep 30
-
 
 # 初始化
 pip install -U -r requirements.txt
 sleep 5
 
 # 后台运行 miner
+echo "run sudo nohup python3 miner.py --gpu=true > block.log 2>&1 &"
 sudo nohup python3 miner.py --gpu=true > block.log 2>&1 &
 sleep 3
 
 # 查看进程
-ps -aux|grep python3
+sudo ps -aux|grep python3
 sleep 1
 
 # 列出所有支持设备
@@ -53,8 +54,10 @@ sleep 1
 sleep 1
 
 # 单显卡
-sudo nohup ./xengpuminer -b 0 >xen-log.log &
+echo "run sudo nohup ./xengpuminer -b 0 > xen-log.log 2>&1 &"
+sudo nohup ./xengpuminer -b 0 > xen-log.log 2>&1 &
 sleep 3
+
 
 # 查看进程
 ps -aux|grep xengpuminer

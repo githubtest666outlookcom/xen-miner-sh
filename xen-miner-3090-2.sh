@@ -32,6 +32,7 @@ chmod +x build.sh
 sleep 1
 # 初始化挖矿代码-设置显卡计算能力
 # A4000 A5000 A6000 3090
+echo "run ./build.sh -cuda_arch sm_86"
 ./build.sh -cuda_arch sm_86
 sleep 30
 
@@ -40,6 +41,7 @@ pip install -U -r requirements.txt
 sleep 5
 
 # 后台运行 miner
+echo "run sudo nohup python3 miner.py --gpu=true > block.log 2>&1 &"
 sudo nohup python3 miner.py --gpu=true > block.log 2>&1 &
 sleep 3
 
@@ -52,8 +54,10 @@ sleep 1
 sleep 1
 
 # 多设备挖矿
+echo "run sudo nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &"
 sudo nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
 sleep 3
+echo "run sudo nohup ./xengpuminer -d 1 > xen-log2.log 2>&1 &"
 sudo nohup ./xengpuminer -d 1 > xen-log2.log 2>&1 &
 sleep 3
 
