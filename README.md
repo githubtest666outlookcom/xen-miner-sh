@@ -8,7 +8,7 @@
   sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/xu574303479/xen-miner-sh/master/xen-miner-3090-1.sh && sudo chmod +x xen-miner-3090-1.sh && sudo ./xen-miner-3090-1.sh
   ```
 
-- 单 GPU 4090
+- 单 GPU 4090 4070
   ```
   sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/xu574303479/xen-miner-sh/master/xen-miner-4090-1.sh && sudo chmod +x xen-miner-4090-1.sh && sudo ./xen-miner-4090-1.sh
   ```

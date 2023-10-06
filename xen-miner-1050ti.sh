@@ -4,7 +4,7 @@
 sudo apt update
 sleep 5
 sudo apt install ocl-icd-opencl-dev -y
-sleep 10
+sleep 15
 sudo apt-get install build-essential
 sleep 3
 sudo apt install cmake -y
