@@ -5,10 +5,10 @@
 
 - 单 GPU
   ```
-  sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/xu574303479/xen-miner-sh/master/xen-miner-1.sh && sudo chmod +x xen-miner-1.sh && sudo ./xen-miner-1.sh
+  sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/xu574303479/xen-miner-sh/master/xen-miner-3090-1.sh && sudo chmod +x xen-miner-3090-1.sh && sudo ./xen-miner-3090-1.sh
   ```
 
 - 多 GPU
   ```
-  sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/xu574303479/xen-miner-sh/master/xen-miner-2.sh && sudo chmod +x xen-miner-2.sh && sudo ./xen-miner-2.sh
+  sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/xu574303479/xen-miner-sh/master/xen-miner-3090-2.sh && sudo chmod +x xen-miner-3090-2.sh && sudo ./xen-miner-3090-2.sh
   ```
