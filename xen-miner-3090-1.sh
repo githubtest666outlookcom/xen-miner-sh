@@ -52,9 +52,9 @@ sleep 1
 sleep 1
 
 # 多设备挖矿
-sudo nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
-sleep 3
+#sudo nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
+#sleep 3
 
 # 查看进程
-ps -aux|grep xengpuminer
-sleep 1
+#ps -aux|grep xengpuminer
+#sleep 1
