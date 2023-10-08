@@ -51,24 +51,24 @@ sleep 1
 ./xengpuminer -l -m cuda
 sleep 1
 
-# 多设备挖矿
-sudo nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
-sleep 3
-sudo nohup ./xengpuminer -d 1 > xen-log2.log 2>&1 &
-sleep 3
-sudo nohup ./xengpuminer -d 2 > xen-log3.log 2>&1 &
-sleep 3
-sudo nohup ./xengpuminer -d 3 > xen-log4.log 2>&1 &
-sleep 3
-sudo nohup ./xengpuminer -d 4 > xen-log5.log 2>&1 &
-sleep 3
-sudo nohup ./xengpuminer -d 5 > xen-log6.log 2>&1 &
-sleep 3
-sudo nohup ./xengpuminer -d 6 > xen-log7.log 2>&1 &
-sleep 3
-sudo nohup ./xengpuminer -d 7 > xen-log8.log 2>&1 &
-sleep 3
-
-# 查看进程
-ps -aux|grep xengpuminer
-sleep 1
+## 多设备挖矿
+#sudo nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
+#sleep 3
+#sudo nohup ./xengpuminer -d 1 > xen-log2.log 2>&1 &
+#sleep 3
+#sudo nohup ./xengpuminer -d 2 > xen-log3.log 2>&1 &
+#sleep 3
+#sudo nohup ./xengpuminer -d 3 > xen-log4.log 2>&1 &
+#sleep 3
+#sudo nohup ./xengpuminer -d 4 > xen-log5.log 2>&1 &
+#sleep 3
+#sudo nohup ./xengpuminer -d 5 > xen-log6.log 2>&1 &
+#sleep 3
+#sudo nohup ./xengpuminer -d 6 > xen-log7.log 2>&1 &
+#sleep 3
+#sudo nohup ./xengpuminer -d 7 > xen-log8.log 2>&1 &
+#sleep 3
+#
+## 查看进程
+#ps -aux|grep xengpuminer
+#sleep 1
