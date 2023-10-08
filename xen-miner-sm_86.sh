@@ -1,5 +1,3 @@
-# 地址
-# 0x1cCF82683733c201e3D4d8cF7359c77aa55669Bd
 # 环境配置
 sudo apt update
 sleep 5
@@ -24,8 +22,6 @@ sleep 5
 # 进入文件夹
 cd XENGPUMiner
 sleep 1
-# 替换地址
-sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0x1cCF82683733c201e3D4d8cF7359c77aa55669Bd/g' config.conf
 
 # 授权
 chmod +x build.sh
@@ -39,28 +35,27 @@ sleep 30
 pip install -U -r requirements.txt
 sleep 5
 
-# 后台运行 miner
-sudo nohup python3 miner.py --gpu=true > block.log 2>&1 &
-sleep 3
-
-# 查看进程
-sudo ps -aux|grep python3
-sleep 1
-
 # 列出所有支持设备
 ./xengpuminer -l -m cuda
 sleep 1
 
+# 手动运行以下命令开始挖矿
+# 替换地址 0x1cCF82683733c201e3D4d8cF7359c77aa55669Bd 更换成为自己的挖矿地址
+#cd /home/block/XENGPUMiner
+#sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0x1cCF82683733c201e3D4d8cF7359c77aa55669Bd/g' config.conf
+
+# 后台运行 miner
+#sudo nohup python3 miner.py --gpu=true > block.log 2>&1 &
+
+# 查看进程
+#sudo ps -aux|grep python3
+
+# 单显卡
+#sudo nohup ./xengpuminer -b 0 > xen-log.log 2>&1 &
+
 ## 多设备挖矿
 #sudo nohup ./xengpuminer -d 0 > xen-log1.log 2>&1 &
-#sleep 3
 #sudo nohup ./xengpuminer -d 1 > xen-log2.log 2>&1 &
-#sleep 3
-#sudo nohup ./xengpuminer -d 2 > xen-log3.log 2>&1 &
-#sleep 3
-#sudo nohup ./xengpuminer -d 3 > xen-log4.log 2>&1 &
-#sleep 3
-#
+
 ## 查看进程
 #ps -aux|grep xengpuminer
-#sleep 1
