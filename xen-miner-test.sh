@@ -1,5 +1,5 @@
 # 地址
-# 0x1cCF82683733c201e3D4d8cF7359c77aa55669Bd
+# 0x9bac6b1d00976eaacbe47031245a14e6d43f6d16
 # 环境配置
 sudo apt update
 sleep 5
@@ -25,7 +25,7 @@ sleep 5
 cd XENGPUMiner
 sleep 1
 # 替换地址
-sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0x1cCF82683733c201e3D4d8cF7359c77aa55669Bd/g' config.conf
+sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0x9bac6b1d00976eaacbe47031245a14e6d43f6d16/g' config.conf
 
 # 授权
 chmod +x build.sh
